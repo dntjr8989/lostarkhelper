@@ -1,6 +1,6 @@
 package com.kws.lostarkhelper.lostarkapi.url;
 
-public enum MarketsUrl {
+public enum MarketsUrl implements LostArkUrl{
 
     GET_SEARCH_OPTIONS_FOR_MARKET("/options"),
     GET_MARKET_ITEM_BY_ID("/items/{itemId}"),
@@ -14,6 +14,7 @@ public enum MarketsUrl {
         this.url = PREFIX + url;
     }
 
+    @Override
     public String url(){
         return this.url;
     }

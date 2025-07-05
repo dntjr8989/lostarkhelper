@@ -1,6 +1,6 @@
 package com.kws.lostarkhelper.lostarkapi.url;
 
-public enum CharactersUrl {
+public enum CharactersUrl implements LostArkUrl{
 
     GET_CHARACTER_SIBLINGS("/{characterName}/siblings") //
     ;
@@ -12,6 +12,7 @@ public enum CharactersUrl {
         this.url = PREFIX + url;
     }
 
+    @Override
     public String url(){
         return this.url;
     }

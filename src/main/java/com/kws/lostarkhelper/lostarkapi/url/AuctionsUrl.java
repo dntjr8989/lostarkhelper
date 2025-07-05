@@ -1,6 +1,6 @@
 package com.kws.lostarkhelper.lostarkapi.url;
 
-public enum AuctionsUrl {
+public enum AuctionsUrl implements LostArkUrl{
 
     GET_SEARCH_OPTIONS_FOR_AUCTION_HOUSE("/options"),
     POST_ALL_ACTIVE_AUCTIONS_WITH_SEARCH_OPTIONS("items")
@@ -13,6 +13,7 @@ public enum AuctionsUrl {
         this.url = PREFIX + url;
     }
 
+    @Override
     public String url(){
         return this.url;
     }

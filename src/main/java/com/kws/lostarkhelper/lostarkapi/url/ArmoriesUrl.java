@@ -1,6 +1,6 @@
 package com.kws.lostarkhelper.lostarkapi.url;
 
-public enum ArmoriesUrl {
+public enum ArmoriesUrl implements LostArkUrl{
 
     GET_SUMMARY_PROFILE_INFO("/{characterName}"),
     GET_SUMMARY_BASIC_STATS("/{characterName}/profiles"),
@@ -22,6 +22,7 @@ public enum ArmoriesUrl {
         this.url = PREFIX + url;
     }
 
+    @Override
     public String url() {
         return this.url;
     }

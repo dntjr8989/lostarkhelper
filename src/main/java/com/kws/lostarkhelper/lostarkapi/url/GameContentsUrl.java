@@ -1,6 +1,6 @@
 package com.kws.lostarkhelper.lostarkapi.url;
 
-public enum GameContentsUrl {
+public enum GameContentsUrl implements LostArkUrl{
 
     GET_LIST_OF_CALENDER_THIS_WEEK("/calendar")
     ;
@@ -11,6 +11,7 @@ public enum GameContentsUrl {
         this.url = PREFIX + url;
     }
 
+    @Override
     public String url(){
         return this.url;
     }
