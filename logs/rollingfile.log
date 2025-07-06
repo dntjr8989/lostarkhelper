@@ -1,0 +1,46 @@
+[36m[DEBUG][m 2025-07-06 19:09:02.630 [HttpClient-1-SelectorManager][LoggingProviderImpl.java] debug - [HttpClient-1-SelectorManager] [27s 126ms] HttpClientImpl(1) next timeout: 0
+[36m[DEBUG][m 2025-07-06 19:09:02.635 [HttpClient-1-SelectorManager][LoggingProviderImpl.java] debug - [HttpClient-1-SelectorManager] [27s 131ms] HttpClientImpl(1) next expired: 0
+[36m[DEBUG][m 2025-07-06 19:09:02.635 [HttpClient-1-SelectorManager][LoggingProviderImpl.java] debug - [HttpClient-1-SelectorManager] [27s 132ms] HttpClientImpl(1) Next deadline is 3000
+[36m[DEBUG][m 2025-07-06 19:09:05.162 [HikariPool-1:housekeeper][HikariPool.java] HikariPool - HikariPool-1 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0)
+[36m[DEBUG][m 2025-07-06 19:09:05.162 [HikariPool-1:housekeeper][HikariPool.java] HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+[36m[DEBUG][m 2025-07-06 19:09:05.637 [HttpClient-1-SelectorManager][LoggingProviderImpl.java] debug - [HttpClient-1-SelectorManager] [30s 133ms] HttpClientImpl(1) next timeout: 0
+[36m[DEBUG][m 2025-07-06 19:09:05.638 [HttpClient-1-SelectorManager][LoggingProviderImpl.java] debug - [HttpClient-1-SelectorManager] [30s 134ms] HttpClientImpl(1) next expired: 0
+[36m[DEBUG][m 2025-07-06 19:09:05.638 [HttpClient-1-SelectorManager][LoggingProviderImpl.java] debug - [HttpClient-1-SelectorManager] [30s 135ms] HttpClientImpl(1) Next deadline is 3000
+[36m[DEBUG][m 2025-07-06 19:09:08.640 [HttpClient-1-SelectorManager][LoggingProviderImpl.java] debug - [HttpClient-1-SelectorManager] [33s 136ms] HttpClientImpl(1) next timeout: 0
+[36m[DEBUG][m 2025-07-06 19:09:08.640 [HttpClient-1-SelectorManager][LoggingProviderImpl.java] debug - [HttpClient-1-SelectorManager] [33s 137ms] HttpClientImpl(1) next expired: 0
+[36m[DEBUG][m 2025-07-06 19:09:08.641 [HttpClient-1-SelectorManager][LoggingProviderImpl.java] debug - [HttpClient-1-SelectorManager] [33s 137ms] HttpClientImpl(1) Next deadline is 3000
+[36m[DEBUG][m 2025-07-06 19:09:11.643 [HttpClient-1-SelectorManager][LoggingProviderImpl.java] debug - [HttpClient-1-SelectorManager] [36s 139ms] HttpClientImpl(1) next timeout: 0
+[36m[DEBUG][m 2025-07-06 19:09:11.644 [HttpClient-1-SelectorManager][LoggingProviderImpl.java] debug - [HttpClient-1-SelectorManager] [36s 141ms] HttpClientImpl(1) next expired: 0
+[36m[DEBUG][m 2025-07-06 19:09:11.644 [HttpClient-1-SelectorManager][LoggingProviderImpl.java] debug - [HttpClient-1-SelectorManager] [36s 141ms] HttpClientImpl(1) Next deadline is 3000
+[36m[DEBUG][m 2025-07-06 19:09:14.603 [SpringApplicationShutdownHook][ApplicationAvailabilityBean.java] ApplicationAvailabilityBean - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+[36m[DEBUG][m 2025-07-06 19:09:14.603 [SpringApplicationShutdownHook][AbstractApplicationContext.java] AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1a6f2363, started on Sun Jul 06 19:08:34 KST 2025
+[36m[DEBUG][m 2025-07-06 19:09:14.604 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase 2147482623
+[32m[INFO ][m 2025-07-06 19:09:14.605 [SpringApplicationShutdownHook][GracefulShutdown.java] GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[32m[INFO ][m 2025-07-06 19:09:14.612 [tomcat-shutdown][GracefulShutdown.java] GracefulShutdown - Graceful shutdown complete
+[36m[DEBUG][m 2025-07-06 19:09:14.613 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase 2147481599
+[36m[DEBUG][m 2025-07-06 19:09:14.613 [tomcat-shutdown][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'webServerGracefulShutdown' completed its stop procedure
+[36m[DEBUG][m 2025-07-06 19:09:14.615 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'webServerStartStop' completed its stop procedure
+[36m[DEBUG][m 2025-07-06 19:09:14.615 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase 1073741823
+[36m[DEBUG][m 2025-07-06 19:09:14.615 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'applicationTaskExecutor' completed its stop procedure
+[36m[DEBUG][m 2025-07-06 19:09:14.615 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase -2147483647
+[36m[DEBUG][m 2025-07-06 19:09:14.615 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'springBootLoggingLifecycle' completed its stop procedure
+[32m[INFO ][m 2025-07-06 19:09:14.617 [SpringApplicationShutdownHook][AbstractEntityManagerFactoryBean.java] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[36m[DEBUG][m 2025-07-06 19:09:14.617 [SpringApplicationShutdownHook][SessionFactoryImpl.java] SessionFactoryImpl - HHH000031: Closing
+[36m[DEBUG][m 2025-07-06 19:09:14.617 [SpringApplicationShutdownHook][TypeConfiguration.java] TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@4942f17c] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@7b5c9412]
+[36m[DEBUG][m 2025-07-06 19:09:14.617 [SpringApplicationShutdownHook][AbstractServiceRegistryImpl.java] AbstractServiceRegistryImpl - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+[36m[DEBUG][m 2025-07-06 19:09:14.618 [SpringApplicationShutdownHook][BootstrapServiceRegistryImpl.java] BootstrapServiceRegistryImpl - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+[32m[INFO ][m 2025-07-06 19:09:14.618 [SpringApplicationShutdownHook][HikariDataSource.java] HikariDataSource - HikariPool-1 - Shutdown initiated...
+[36m[DEBUG][m 2025-07-06 19:09:14.618 [SpringApplicationShutdownHook][HikariPool.java] HikariPool - HikariPool-1 - Before shutdown stats (total=10/10, idle=10/10, active=0, waiting=0)
+[36m[DEBUG][m 2025-07-06 19:09:14.619 [HikariPool-1:connection-closer][PoolBase.java] PoolBase - HikariPool-1 - Closing connection conn0: url=jdbc:h2:mem:9b6b0bf0-7519-4d32-bc95-e8716896411c user=SA: (connection evicted)
+[36m[DEBUG][m 2025-07-06 19:09:14.620 [HikariPool-1:connection-closer][PoolBase.java] PoolBase - HikariPool-1 - Closing connection conn1: url=jdbc:h2:mem:9b6b0bf0-7519-4d32-bc95-e8716896411c user=SA: (connection evicted)
+[36m[DEBUG][m 2025-07-06 19:09:14.620 [HikariPool-1:connection-closer][PoolBase.java] PoolBase - HikariPool-1 - Closing connection conn2: url=jdbc:h2:mem:9b6b0bf0-7519-4d32-bc95-e8716896411c user=SA: (connection evicted)
+[36m[DEBUG][m 2025-07-06 19:09:14.620 [HikariPool-1:connection-closer][PoolBase.java] PoolBase - HikariPool-1 - Closing connection conn3: url=jdbc:h2:mem:9b6b0bf0-7519-4d32-bc95-e8716896411c user=SA: (connection evicted)
+[36m[DEBUG][m 2025-07-06 19:09:14.620 [HikariPool-1:connection-closer][PoolBase.java] PoolBase - HikariPool-1 - Closing connection conn4: url=jdbc:h2:mem:9b6b0bf0-7519-4d32-bc95-e8716896411c user=SA: (connection evicted)
+[36m[DEBUG][m 2025-07-06 19:09:14.620 [HikariPool-1:connection-closer][PoolBase.java] PoolBase - HikariPool-1 - Closing connection conn5: url=jdbc:h2:mem:9b6b0bf0-7519-4d32-bc95-e8716896411c user=SA: (connection evicted)
+[36m[DEBUG][m 2025-07-06 19:09:14.620 [HikariPool-1:connection-closer][PoolBase.java] PoolBase - HikariPool-1 - Closing connection conn6: url=jdbc:h2:mem:9b6b0bf0-7519-4d32-bc95-e8716896411c user=SA: (connection evicted)
+[36m[DEBUG][m 2025-07-06 19:09:14.620 [HikariPool-1:connection-closer][PoolBase.java] PoolBase - HikariPool-1 - Closing connection conn7: url=jdbc:h2:mem:9b6b0bf0-7519-4d32-bc95-e8716896411c user=SA: (connection evicted)
+[36m[DEBUG][m 2025-07-06 19:09:14.620 [HikariPool-1:connection-closer][PoolBase.java] PoolBase - HikariPool-1 - Closing connection conn8: url=jdbc:h2:mem:9b6b0bf0-7519-4d32-bc95-e8716896411c user=SA: (connection evicted)
+[36m[DEBUG][m 2025-07-06 19:09:14.620 [HikariPool-1:connection-closer][PoolBase.java] PoolBase - HikariPool-1 - Closing connection conn9: url=jdbc:h2:mem:9b6b0bf0-7519-4d32-bc95-e8716896411c user=SA: (connection evicted)
+[36m[DEBUG][m 2025-07-06 19:09:14.620 [SpringApplicationShutdownHook][HikariPool.java] HikariPool - HikariPool-1 - After  shutdown stats (total=0/10, idle=0/10, active=0, waiting=0)
+[32m[INFO ][m 2025-07-06 19:09:14.620 [SpringApplicationShutdownHook][HikariDataSource.java] HikariDataSource - HikariPool-1 - Shutdown completed.
+[36m[DEBUG][m 2025-07-06 19:09:14.620 [SpringApplicationShutdownHook][ExecutorConfigurationSupport.java] ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
