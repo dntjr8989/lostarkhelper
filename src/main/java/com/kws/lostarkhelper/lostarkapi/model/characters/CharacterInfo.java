@@ -1,4 +1,4 @@
-package com.kws.lostarkhelper.lostarkapi.dto;
+package com.kws.lostarkhelper.lostarkapi.model.characters;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
