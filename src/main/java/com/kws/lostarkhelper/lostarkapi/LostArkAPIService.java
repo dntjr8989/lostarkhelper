@@ -8,9 +8,11 @@ import com.kws.lostarkhelper.lostarkapi.model.armories.collectibles.Collectible;
 import com.kws.lostarkhelper.lostarkapi.model.armories.combatSkills.CombatSkill;
 import com.kws.lostarkhelper.lostarkapi.model.armories.engravings.Engravings;
 import com.kws.lostarkhelper.lostarkapi.model.armories.gems.Gems;
+import com.kws.lostarkhelper.lostarkapi.model.auctions.searchoptions.SearchOptions;
 import com.kws.lostarkhelper.lostarkapi.model.characters.CharacterInfo;
 import com.kws.lostarkhelper.lostarkapi.model.armories.items.Item;
 import com.kws.lostarkhelper.lostarkapi.url.ArmoriesUrl;
+import com.kws.lostarkhelper.lostarkapi.url.AuctionsUrl;
 import com.kws.lostarkhelper.lostarkapi.url.CharactersUrl;
 import com.kws.lostarkhelper.lostarkapi.url.LostArkUrlBuilder;
 import lombok.RequiredArgsConstructor;
@@ -240,5 +242,25 @@ public class LostArkAPIService {
                     log.error("5xx Error");
                 })
                 .body(ArkPassive.class);
+    }
+
+    //Auctions API
+    public SearchOptions getSearchOptionsForAuctionHouseAPI(){
+        log.info("LostArkAPIService.getSearchOptionsForAuctionHouseAPI start");
+
+        String url = new LostArkUrlBuilder<>(AuctionsUrl.GET_SEARCH_OPTIONS_FOR_AUCTION_HOUSE)
+                .build();
+        log.info("url : {}", url);
+
+        return lostArkRestClient.get()
+                .uri(url)
+                .retrieve()
+                .onStatus(HttpStatusCode::is4xxClientError, (req,res)->{
+                    log.error("4xx Error");
+                })
+                .onStatus(HttpStatusCode::is5xxServerError, (req,res)->{
+                    log.error("5xx Error");
+                })
+                .body(SearchOptions.class);
     }
 }

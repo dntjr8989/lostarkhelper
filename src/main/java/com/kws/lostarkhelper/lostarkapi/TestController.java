@@ -7,6 +7,7 @@ import com.kws.lostarkhelper.lostarkapi.model.armories.cards.Cards;
 import com.kws.lostarkhelper.lostarkapi.model.armories.collectibles.Collectible;
 import com.kws.lostarkhelper.lostarkapi.model.armories.combatSkills.CombatSkill;
 import com.kws.lostarkhelper.lostarkapi.model.armories.gems.Gems;
+import com.kws.lostarkhelper.lostarkapi.model.auctions.searchoptions.SearchOptions;
 import com.kws.lostarkhelper.lostarkapi.model.characters.CharacterInfo;
 import com.kws.lostarkhelper.lostarkapi.model.armories.items.Item;
 import lombok.RequiredArgsConstructor;
@@ -70,5 +71,10 @@ public class TestController {
     @GetMapping("/armories/arkpassive/characters/{characterName}")
     public ArkPassive getSummaryOfArkPassive(@PathVariable("characterName") String characterName){
         return this.lostArkAPIService.getSummaryOfArkPassiveAPI(characterName);
+    }
+
+    @GetMapping("/auctions/options")
+    public SearchOptions getSearchOptionsForAuctionHouse(){
+        return this.lostArkAPIService.getSearchOptionsForAuctionHouseAPI();
     }
 }
