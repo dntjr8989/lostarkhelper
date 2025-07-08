@@ -1,18 +1,25 @@
 package com.kws.lostarkhelper.lostarkapi.dto.auctions.activeauctions.request;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 
 @Getter
 public class SearchDetailOption {
-    private final Integer FirstOption;
-    private final Integer SecondOption;
-    private final Integer MinValue;
-    private final Integer MaxValue;
+    private final Integer firstOption;
+    private final Integer secondOption;
+    private final Integer minValue;
+    private final Integer maxValue;
 
-    public SearchDetailOption(Integer firstOption, Integer secondOption, Integer minValue, Integer maxValue) {
-        FirstOption = firstOption;
-        SecondOption = secondOption;
-        MinValue = minValue;
-        MaxValue = maxValue;
+    @JsonCreator
+
+    public SearchDetailOption(@JsonProperty("FirstOption") Integer firstOption,
+                              @JsonProperty("SecondOption") Integer secondOption,
+                              @JsonProperty("MinValue") Integer minValue,
+                              @JsonProperty("MaxValue") Integer maxValue) {
+        this.firstOption = firstOption;
+        this.secondOption = secondOption;
+        this.minValue = minValue;
+        this.maxValue = maxValue;
     }
 }

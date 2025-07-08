@@ -3,7 +3,7 @@ package com.kws.lostarkhelper.lostarkapi.url;
 public enum AuctionsUrl implements LostArkUrl{
 
     GET_SEARCH_OPTIONS_FOR_AUCTION_HOUSE("/options"),
-    POST_ALL_ACTIVE_AUCTIONS_WITH_SEARCH_OPTIONS("items")
+    POST_ALL_ACTIVE_AUCTIONS_WITH_SEARCH_OPTIONS("/items")
     ;
 
     private final static String PREFIX = "/auctions";

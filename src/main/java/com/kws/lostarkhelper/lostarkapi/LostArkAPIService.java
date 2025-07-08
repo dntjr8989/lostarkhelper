@@ -273,6 +273,7 @@ public class LostArkAPIService {
         String url = new LostArkUrlBuilder<>(AuctionsUrl.POST_ALL_ACTIVE_AUCTIONS_WITH_SEARCH_OPTIONS)
                 .build();
         log.info("url : {}", url);
+        log.info("requestParam : {} ", requestAuctionItems.toString());
 
         return lostArkRestClient.post()
                 .uri(url)
