@@ -1,16 +1,19 @@
 package com.kws.lostarkhelper.lostarkapi;
 
-import com.kws.lostarkhelper.lostarkapi.model.armories.arkpassive.ArkPassive;
-import com.kws.lostarkhelper.lostarkapi.model.armories.avatars.Avatar;
-import com.kws.lostarkhelper.lostarkapi.model.armories.basicStats.BasicStats;
-import com.kws.lostarkhelper.lostarkapi.model.armories.cards.Cards;
-import com.kws.lostarkhelper.lostarkapi.model.armories.collectibles.Collectible;
-import com.kws.lostarkhelper.lostarkapi.model.armories.combatSkills.CombatSkill;
-import com.kws.lostarkhelper.lostarkapi.model.armories.engravings.Engravings;
-import com.kws.lostarkhelper.lostarkapi.model.armories.gems.Gems;
-import com.kws.lostarkhelper.lostarkapi.model.auctions.searchoptions.SearchOptions;
-import com.kws.lostarkhelper.lostarkapi.model.characters.CharacterInfo;
-import com.kws.lostarkhelper.lostarkapi.model.armories.items.Item;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.arkpassive.response.ArkPassive;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.avatars.response.Avatar;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.basicStats.response.BasicStats;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.cards.response.Cards;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.collectibles.response.Collectible;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.combatSkills.response.CombatSkill;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.engravings.response.Engravings;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.gems.response.Gems;
+import com.kws.lostarkhelper.lostarkapi.dto.auctions.activeauctions.request.RequestAuctionItems;
+import com.kws.lostarkhelper.lostarkapi.dto.auctions.activeauctions.response.Auction;
+import com.kws.lostarkhelper.lostarkapi.dto.auctions.activeauctions.response.AuctionInfo;
+import com.kws.lostarkhelper.lostarkapi.dto.auctions.searchoptions.response.SearchOptions;
+import com.kws.lostarkhelper.lostarkapi.dto.characters.response.CharacterInfo;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.items.response.ArmoryEquipMent;
 import com.kws.lostarkhelper.lostarkapi.url.ArmoriesUrl;
 import com.kws.lostarkhelper.lostarkapi.url.AuctionsUrl;
 import com.kws.lostarkhelper.lostarkapi.url.CharactersUrl;
@@ -75,7 +78,7 @@ public class LostArkAPIService {
                 .body(BasicStats.class);
     }
 
-    public List<Item> getSummaryOfItemsAPI(String characterName) {
+    public List<ArmoryEquipMent> getSummaryOfItemsAPI(String characterName) {
 
         log.info("LostArkAPIService.getItemsAPI start");
 
@@ -93,7 +96,7 @@ public class LostArkAPIService {
                 .onStatus(HttpStatusCode::is5xxServerError, (req,res)->{
                     log.error("5xx Error");
                 })
-                .body(new ParameterizedTypeReference<List<Item>>() {
+                .body(new ParameterizedTypeReference<List<ArmoryEquipMent>>() {
                 });
     }
 
@@ -262,5 +265,25 @@ public class LostArkAPIService {
                     log.error("5xx Error");
                 })
                 .body(SearchOptions.class);
+    }
+
+    public Auction getAllActiveAuctionWithSearchOptionsAPI(RequestAuctionItems requestAuctionItems){
+        log.info("LostArkAPIService.getAllActiveAuctionWithSearchOptionsAPI start");
+
+        String url = new LostArkUrlBuilder<>(AuctionsUrl.POST_ALL_ACTIVE_AUCTIONS_WITH_SEARCH_OPTIONS)
+                .build();
+        log.info("url : {}", url);
+
+        return lostArkRestClient.post()
+                .uri(url)
+                .body(requestAuctionItems)
+                .retrieve()
+                .onStatus(HttpStatusCode::is4xxClientError, (req,res)->{
+                    log.error("4xx Error");
+                })
+                .onStatus(HttpStatusCode::is5xxServerError, (req,res)->{
+                    log.error("5xx Error");
+                })
+                .body(Auction.class);
     }
 }

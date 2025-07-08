@@ -1,19 +1,23 @@
 package com.kws.lostarkhelper.lostarkapi;
 
-import com.kws.lostarkhelper.lostarkapi.model.armories.arkpassive.ArkPassive;
-import com.kws.lostarkhelper.lostarkapi.model.armories.avatars.Avatar;
-import com.kws.lostarkhelper.lostarkapi.model.armories.basicStats.BasicStats;
-import com.kws.lostarkhelper.lostarkapi.model.armories.cards.Cards;
-import com.kws.lostarkhelper.lostarkapi.model.armories.collectibles.Collectible;
-import com.kws.lostarkhelper.lostarkapi.model.armories.combatSkills.CombatSkill;
-import com.kws.lostarkhelper.lostarkapi.model.armories.gems.Gems;
-import com.kws.lostarkhelper.lostarkapi.model.auctions.searchoptions.SearchOptions;
-import com.kws.lostarkhelper.lostarkapi.model.characters.CharacterInfo;
-import com.kws.lostarkhelper.lostarkapi.model.armories.items.Item;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.arkpassive.response.ArkPassive;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.avatars.response.Avatar;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.basicStats.response.BasicStats;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.cards.response.Cards;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.collectibles.response.Collectible;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.combatSkills.response.CombatSkill;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.gems.response.Gems;
+import com.kws.lostarkhelper.lostarkapi.dto.armories.items.response.ArmoryEquipMent;
+import com.kws.lostarkhelper.lostarkapi.dto.auctions.activeauctions.request.RequestAuctionItems;
+import com.kws.lostarkhelper.lostarkapi.dto.auctions.activeauctions.response.Auction;
+import com.kws.lostarkhelper.lostarkapi.dto.auctions.searchoptions.response.SearchOptions;
+import com.kws.lostarkhelper.lostarkapi.dto.characters.response.CharacterInfo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -39,7 +43,7 @@ public class TestController {
     }
 
     @GetMapping("/armories/items/characters/{characterName}")
-    public List<Item> getSummaryOfItems(@PathVariable("characterName") String characterName){
+    public List<ArmoryEquipMent> getSummaryOfItems(@PathVariable("characterName") String characterName){
         return this.lostArkAPIService.getSummaryOfItemsAPI(characterName);
     }
 
@@ -76,5 +80,10 @@ public class TestController {
     @GetMapping("/auctions/options")
     public SearchOptions getSearchOptionsForAuctionHouse(){
         return this.lostArkAPIService.getSearchOptionsForAuctionHouseAPI();
+    }
+
+    @PostMapping("/auctions/items")
+    public Auction getAllActiveAuctionWithSearchOptions(@RequestBody RequestAuctionItems requestAuctionItems){
+        return this.lostArkAPIService.getAllActiveAuctionWithSearchOptionsAPI(requestAuctionItems);
     }
 }
